@@ -1,0 +1,99 @@
+
+
+
+
+.Nav{
+
+    position: fixed;
+
+    width: 100vw;
+    height: 70px;
+
+    border-bottom: solid white 1px;
+
+    background-image: url('https://c.wallhere.com/photos/f6/3c/1920x1080_px_abstract_Dark_pattern_vector-839366.jpg!d');
+z-index: 9999;
+
+
+}
+
+
+.franja1{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    z-index: 2;
+}
+
+.franja1::after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    width: 200%;
+    height: 100%;
+    background: rgba(141, 0, 0, 0.801);
+    transform: skew(40deg);
+}
+
+.logo{
+    position: absolute;
+
+    width: 120px;
+    height: 150px;
+
+
+    margin-top: -40px;
+    margin-left: 20px;
+
+
+
+    z-index: 9000;
+}
+
+.botonera{
+
+    position: absolute;
+    display: inline-block;
+    width: fit-content;
+    height: 100px;
+    z-index: 9999;
+    color: white;
+
+    margin-top: 40px;
+    margin-left: 100px;
+}
+
+.buttons{
+
+    padding: 5px;
+    margin: 5px;
+
+    font-size: 18px;
+}
+
+.buttons:hover{
+    color: gray;
+    cursor: pointer;
+}
+
+.active{
+    color: black !important;
+    
+}
+
+.link{
+    text-decoration: none;
+    text-decoration-color: none;
+}
+
+
+.icon_flag{
+
+    font-size: 15px;
+}
+
+.icon_add{
+
+    font-size: 16px;
+}

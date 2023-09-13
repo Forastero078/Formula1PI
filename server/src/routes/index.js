@@ -3,6 +3,9 @@ const { getDrivers } = require('../controllers/getDrivers');
 const { getDriverByParams } = require('../controllers/getDriverByParams');
 const { getDriverByQuery } = require('../controllers/getDriverByQuery');
 const { createDriver } = require('../controllers/createDriver');
+const { getTeams } = require('../controllers/getTeams');
+const { createNewUser } = require("../controllers/createNewUser");
+const { login } = require("../controllers/login");
 const router = Router();
 
 router.get('/drivers', (req, res) => {
@@ -38,6 +41,17 @@ router.get('/teams', (req, res) => {
 //     Obtiene un arreglo con todos los teams existentes de la API.
 // En una primera instancia, cuando la base de datos este vacía, deberás guardar todos los teams que encuentres en la API.
 // Estos deben ser obtenidos de la API (se evaluará que no haya hardcodeo). Luego de obtenerlos de la API, deben ser guardados en la base de datos para su posterior consumo desde allí.
-})
+   return getTeams(req, res);
+});
+
+router.post('/user', (req, res) => {
+    return createNewUser(req, res);
+});
+
+router.post('/login', (req, res) => {
+    return login(req, res);
+});
+
+
 
 module.exports = router;

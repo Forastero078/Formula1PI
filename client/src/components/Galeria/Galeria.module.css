@@ -1,0 +1,17 @@
+
+
+
+.drivers{
+    width: 100vw;
+    /* height: 100vh; */
+
+   margin-top: -90px;
+
+    z-index: -9999;
+
+    background:linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('https://static.vecteezy.com/system/resources/previews/002/400/831/large_2x/dark-blue-widescreen-background-with-wheels-with-different-transparencies-modern-geometric-design-simple-illustration-vector.jpg');
+
+    background-attachment: fixed;
+    background-repeat: repeat; /* Repite la imagen de fondo */
+
+}

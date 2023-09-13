@@ -1,34 +1,74 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import axios from 'axios';
+import React, { useState, useEffect } from 'react'
+import { Routes, Route } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { allDrivers } from './redux/actions';
+import LandingPage from './components/LandingPage/LandingPage';
+import Home from './components/Home/Home';
+import NavBar from './components/NavBar/NavBar';
+import Galeria from './components/Galeria/Galeria';
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const dispatch = useDispatch();
+
+  const [access, setAccess] = useState(true);
+
+
+
+  useEffect(() => {
+    !access && navigate('/');
+  }, [access, navigate]);
+
+  useEffect(() => {
+    dispatch(allDrivers());
+  }, []);
+
+
+  const login = async (dataUser) => {
+
+    try {
+      const response = await axios.post('http://localhost:3001/login', { ...dataUser });
+      const { data } = response;
+
+      if (data) {
+        setAccess(true);
+        navigate('/home');
+      } else {
+        alert('El usuario o contraseña es incorrecto');
+      }
+    } catch (error) {
+      alert('El usuario o contraseña es incorrecto');
+    }
+  }
+
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className='App'>
+
+      
+        {location.pathname !== '/' && <NavBar />}
+      
+
+      <Routes>
+
+        <Route path='/' element={<LandingPage login={login} />} />
+        <Route path='/home' element={<Home />} />
+        <Route path='/drivers' element={<Galeria />} />
+        <Route path='/detail' element={'Detail'} />
+        <Route path='/createRacer' element={'Form'} />
+
+
+
+
+      </Routes>
+
+    </div>
   )
 }
 

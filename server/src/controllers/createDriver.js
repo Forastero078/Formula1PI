@@ -19,7 +19,14 @@ const createDriver = (req, res) => {
             birdthDate: body.birdthDate
         });
 
-        res.status(200).json(newDriver);
+        res.status(200).json({
+            name: body.name,
+            lastName: body.lastName,
+            description: body.description,
+            image: body.image,
+            nationality: body.nationality,
+            birdthDate: body.birdthDate
+        });
     } catch (error) {
         res.status(400).json({ error: error.message })
     }

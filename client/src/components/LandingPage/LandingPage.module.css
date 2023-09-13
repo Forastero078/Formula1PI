@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+.title {
+    text-align: center;
+ font-family: 'Space Mono';
+ font-size: 35px;
+ 
+ margin-top: 20%;
+ margin-bottom: -10%;
+}
+
+.subtitle {
+ font-family: 'Space Mono';
+ margin-top: 70px;
+ 
+}
+
+.login{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.warning {
+    position: absolute;
+    font-size: 12px;
+    margin: 1px;
+
+    color: rgb(187, 185, 185);
+}
+
+.logo {
+    position: absolute;
+    width: 600px;
+    height: 200px;
+    z-index: 1000;
+    color: white;
+   
+    margin-top: 10%;
+    margin-left: 0%;
+    padding: 0%;
+}
+
+.inputs {
+    background-color: rgb(255, 255, 255);
+    color:rgb(6, 6, 6);
+    border: solid rgb(99, 99, 3) 1px;
+    border-radius: 5px;
+    
+}
+
+.botonera{
+    margin-left: -70px;
+}
+
+.button{
+    position: relative;
+    width: 150px;
+    height: 20px;
+
+    margin: 5px;
+    margin-top: 25px;
+
+    color:rgb(7, 156, 236);
+    background-color: black;
+
+    border: solid yellow 1px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.button:hover{
+    color:white;
+    background-color: rgb(132, 132, 7);
+}
+
+.boton{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(-20px);
+}
+
+.botonLogin{
+    position: absolute;
+    top: 0;
+    left: 10;
+    transform: translateX(-50%);
+}
+
+.divPadre {
+    display: contents;
+    position: relative;
+    width: 100%;
+    background: blue;
+    /* background-image: "https://getwallpapers.com/wallpaper/full/b/5/c/114996.jpg";
+    background: fixed; */
+    width: 95%;
+    margin: auto;
+}
+
+.divUno {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    z-index: 2;
+}
+
+.divUno::after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    width: 200%;
+    height: 100%;
+    background: rgba(19, 19, 19, 0.95);
+    transform: skew(40deg);
+}
+
+.titulo{
+    color: white;
+    position: relative;
+    z-index: 1000;
+    margin-top: 20%;
+    margin-left: 15%;
+    padding: 0%;
+
+}
+
+.divDos {
+    /* background: rgb(171, 210, 229); */
+    /* width: 37%; */
+    width: 100%;
+    /* background-image: url("https://getwallpapers.com/wallpaper/full/b/5/c/114996.jpg"); */
+    background-image: url("https://wallpapercave.com/wp/wp8995840.jpg");
+    background-size: cover;
+    right: 0px;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    z-index: 1;
+}
+
+.divDos::before {
+    content: "";
+    position: absolute;
+    left: 61.5%;
+    width: 0.5%;
+    height: 100%;
+    background: rgb(255, 255, 66);
+    transform: skew(40deg);
+}
+
+.userAndPass{
+    margin: 5px;
+    margin-top: 15px;
+    
+}
+
+
+.inputs{
+    margin: 2px;
+    padding: 3px;
+}
+
+
+.popup{
+    display: block;
+}
+
+.none{
+    display:none;
+}

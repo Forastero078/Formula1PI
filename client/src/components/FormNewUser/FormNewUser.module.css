@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+
+.popup{
+    position: absolute;
+
+    width: 100vw;
+    height: 100vh;
+
+    z-index: 9000;
+
+    background-color: rgba(0, 0, 0, 0.603);
+}
+
+
+.form{
+    position: relative;
+
+    width: 41%;
+    height: 90%;
+
+
+    border: solid white 1px;
+    border-radius: 20px;
+
+    left:0;
+    transform: translateX(60%);
+
+    margin-top: 20px;
+
+    padding-right: 50px;
+
+
+    
+    background-image: url('https://c.wallhere.com/photos/f6/3c/1920x1080_px_abstract_Dark_pattern_vector-839366.jpg!d');
+}
+
+
+.h1{
+    color:white;
+    font-size: 34px;
+    text-align: center;
+    font-family: 'Space Mono';
+
+    
+}
+
+.labels{
+    color:white;
+    font-size: 15px;
+    font-family: 'Space Mono';
+}
+
+.inputsAndLabels{
+
+    margin-left: 40px;
+}
+
+.input{
+
+    padding: 5px;
+    margin: -5px;
+}
+
+.img{
+    position: absolute;
+
+    width: 320px;
+    height: 320px;
+
+
+    margin-left: 250px;
+    margin-top: -430px;
+
+    border: solid white 1px;
+    border-radius: 20px;
+}
+
+.button{
+    position: absolute;
+
+    margin-top: -40px;
+
+    left:0;
+    transform: translateX(250%);
+}
+
+.none{
+    display: none;
+}
+
+.close{
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    transform: translateX(0%);
+
+    border: solid white 1px;
+    border-radius: 10px;
+
+    width: 40px;
+    height: 40px;
+
+    text-align: center;
+
+    color: rgb(218, 3, 3);
+    font-size: 25px;
+
+    padding: 10px;
+    padding-bottom: 25px;
+    padding-top: -200px;
+}
+
+.x{
+    position: absolute;
+    /* margin-bottom: 10px; */
+    top: 0;
+    left: 0;
+    transform: translateX(10px);
+}
+
+.warning{
+    position: absolute;
+    font-size: 10px;
+
+    color: rgb(189, 186, 186);
+
+    margin-top: 3px;
+    margin-left: -15px;
+}
