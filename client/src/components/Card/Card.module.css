@@ -15,7 +15,7 @@
     box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.5);
     
 
-    margin: 30px;
+    margin: 10px;
 
     /* background-image: url('https://wallpapercave.com/wp/wp7073213.jpg');
     background-attachment:inherit;
@@ -39,16 +39,23 @@
 
 .img{
     position: absolute;
-    width: 180px;
-    height: 180px;
+    /* width: 180px; */
+    width: 99%;
+    height: 250px;
 
     border: solid white 1px;
-    border-radius: 50%;
+    /* border-radius: 50%; */
+    /* border-radius: 20px 20px 0px 0px; */
+    border-radius: 20px;
 
-    margin-top: 10px;
-    
+    margin-top: 0px;
+/*     
     right: 0;
-    transform: translateX(-5%);
+    transform: translateX(-5%); */
+
+    object-fit: cover;
+    object-position: center 30%;
+
     
 }
 
@@ -82,7 +89,7 @@
 
     font-size: 25px;
 
-    margin-top: -20px;
+    margin-top: 10px;
 
     background: rgba(58, 58, 58, 0.562);
 
@@ -91,12 +98,14 @@
 .default{
     position: absolute;
 
-    font-size: 25px;
+    font-size: 15px;
     font-family: 'Space Mono';
 
     color: white;
 
     text-align: center;
+
+    border-radius: 0px 0px 5px 5px;
 
     width: 100%;
     height: fit-content;
@@ -104,20 +113,26 @@
     font-weight: 500;
 
     background-color: rgb(12, 12, 12,  0.425);
+    
+    margin-top: 43px;
 }
 
 .Mercedes{
     position: absolute;
 
-    font-size: 25px;
+    font-size: 15px;
     font-family: 'Space Mono';
 
     color: white;
 
     text-align: center;
 
+    border-radius: 0px 0px 5px 5px;
+    
     width: 100%;
     height: fit-content;
+
+    margin-top: 43px;
 
     font-weight: 500;
 
@@ -127,15 +142,19 @@
 .Ferrari{
     position: absolute;
 
-    font-size: 25px;
+    font-size: 15px;
     font-family: 'Space Mono';
 
     color: white;
 
     text-align: center;
 
+    border-radius: 0px 0px 5px 5px;
+
     width: 100%;
     height: fit-content;
+
+    margin-top: 43px;
 
     font-weight: 500;
 
@@ -145,15 +164,19 @@
 .RedBull{
     position: absolute;
 
-    font-size: 25px;
+    font-size: 15px;
     font-family: 'Space Mono';
 
     color: white;
 
     text-align: center;
 
+    border-radius: 0px 0px 5px 5px;
+
     width: 100%;
     height: fit-content;
+
+    margin-top: 43px;
 
     font-weight: 500;
 
@@ -163,15 +186,19 @@
 .Williams{
     position: absolute;
 
-    font-size: 25px;
+    font-size: 15px;
     font-family: 'Space Mono';
 
     color: white;
 
     text-align: center;
 
+    border-radius: 0px 0px 5px 5px;
+
     width: 100%;
     height: fit-content;
+
+    margin-top: 43px;
 
     font-weight: 500;
 
@@ -181,15 +208,21 @@
 .Renault{
     position: absolute;
 
-    font-size: 25px;
+    font-size: 15px;
     font-family: 'Space Mono';
 
     color: white;
 
     text-align: center;
 
+    border-radius: 0px 0px 5px 5px;
+
+    border-radius: 0px 0px 5px 5px;
+
     width: 100%;
     height: fit-content;
+
+    margin-top: 43px;
 
     font-weight: 500;
 
@@ -199,15 +232,19 @@
 .AlfaRomeo{
     position: absolute;
 
-    font-size: 25px;
+    font-size: 15px;
     font-family: 'Space Mono';
 
     color: white;
 
     text-align: center;
 
+    border-radius: 0px 0px 5px 5px;
+
     width: 100%;
     height: fit-content;
+
+    margin-top: 43px;
 
     font-weight: 500;
 
@@ -217,15 +254,19 @@
 .AstonMartin{
     position: absolute;
 
-    font-size: 25px;
+    font-size: 15px;
     font-family: 'Space Mono';
 
     color: white;
 
     text-align: center;
 
+    border-radius: 0px 0px 5px 5px;
+
     width: 100%;
     height: fit-content;
+
+    margin-top: 43px;
 
     font-weight: 500;
 
@@ -235,15 +276,19 @@
 .Hass{
     position: absolute;
 
-    font-size: 25px;
+    font-size: 15px;
     font-family: 'Space Mono';
 
     color: white;
 
     text-align: center;
 
+    border-radius: 0px 0px 5px 5px;
+
     width: 100%;
     height: fit-content;
+
+    margin-top: 43px;
 
     font-weight: 500;
 
@@ -253,15 +298,19 @@
 .McLaren{
     position: absolute;
 
-    font-size: 25px;
+    font-size: 15px;
     font-family: 'Space Mono';
 
     color: white;
 
     text-align: center;
 
+    border-radius: 0px 0px 5px 5px;
+
     width: 100%;
     height: fit-content;
+
+    margin-top: 43px;
 
     font-weight: 500;
 
@@ -271,15 +320,19 @@
 .ToroRosso{
     position: absolute;
 
-    font-size: 25px;
+    font-size: 15px;
     font-family: 'Space Mono';
 
     color: white;
 
     text-align: center;
 
+    border-radius: 0px 0px 5px 5px;
+
     width: 100%;
     height: fit-content;
+
+    margin-top: 43px;
 
     font-weight: 500;
 
@@ -289,17 +342,22 @@
 .Alpine{
     position: absolute;
 
-    font-size: 25px;
+    font-size: 15px;
     font-family: 'Space Mono';
 
     color: white;
 
     text-align: center;
 
+    border-radius: 0px 0px 5px 5px;
+
     width: 100%;
     height: fit-content;
+
+    margin-top: 43px;
 
     font-weight: 500;
 
     background-color: rgba(8, 102, 209, 0.425);
 }
+

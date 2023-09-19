@@ -79,10 +79,24 @@
 .button{
     position: absolute;
 
-    margin-top: -40px;
+    margin-top: -30px;
+    margin-left: 40px;
 
     left:0;
     transform: translateX(250%);
+
+    
+    width: 150px;
+
+    /* margin: 5px; */
+    /* margin-top: 25px; */
+
+    color:rgb(7, 156, 236);
+    background-color: black;
+
+    border: solid yellow 1px;
+    border-radius: 5px;
+    text-align: center;
 }
 
 .none{
@@ -96,15 +110,17 @@
     right: 0;
     transform: translateX(0%);
 
-    border: solid white 1px;
-    border-radius: 10px;
+   
 
     width: 40px;
     height: 40px;
 
-    text-align: center;
+    color:rgb(255, 255, 255);
+    background-color: black;
 
-    color: rgb(218, 3, 3);
+    border: solid yellow 1px;
+    border-radius: 5px;
+    text-align: center;
     font-size: 25px;
 
     padding: 10px;

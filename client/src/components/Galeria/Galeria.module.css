@@ -1,17 +1,52 @@
-
-
-
-.drivers{
+.drivers {
     width: 100vw;
     /* height: 100vh; */
 
-   margin-top: -90px;
+    margin-top: -90px;
 
     z-index: -9999;
 
-    background:linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('https://static.vecteezy.com/system/resources/previews/002/400/831/large_2x/dark-blue-widescreen-background-with-wheels-with-different-transparencies-modern-geometric-design-simple-illustration-vector.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('https://static.vecteezy.com/system/resources/previews/002/400/831/large_2x/dark-blue-widescreen-background-with-wheels-with-different-transparencies-modern-geometric-design-simple-illustration-vector.jpg');
 
     background-attachment: fixed;
-    background-repeat: repeat; /* Repite la imagen de fondo */
+    background-repeat: repeat;
+    /* Repite la imagen de fondo */
 
+}
+
+.h1 {
+
+    width: 100vw;
+    height: fit-content;
+
+    background-color: rgba(128, 128, 128, 0.123);
+
+    margin: 100px;
+    margin-left: -60px;
+    padding: 30px;
+    
+    /* margin-top: 150px; */
+
+    padding-top: 100px;
+
+    margin-bottom: -120px;
+
+    text-align: center;
+
+    color: white;
+
+    font-family: 'Space Mono';
+}
+
+.h4 {
+    margin: 20px;
+    margin-top: 150px;
+
+
+
+    text-align: center;
+
+    color: white;
+
+    font-family: 'Space Mono';
 }

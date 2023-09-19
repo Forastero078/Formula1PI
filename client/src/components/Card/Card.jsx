@@ -1,6 +1,7 @@
 import React from "react";
 import styles from './Card.module.css';
 import handlerColorTeam from "./handlerColorTeam";
+import { Link } from "react-router-dom";
 
 
 
@@ -8,6 +9,7 @@ import handlerColorTeam from "./handlerColorTeam";
 export default function Card(props) {
 
     const {
+        id,
         forename,
         surname,
         name,
@@ -22,12 +24,14 @@ export default function Card(props) {
 
     return (
         <div className={styles.card}>
-            <img src={image} alt={surname} className={styles.img} />
+            <Link to={`/detail/${id}`}>
+            <img src={image} alt={surname} className={styles.img} loading="eager"/>
 
             <div className={styles.info}>
-                <p className={styles.name}>{`${forename[0].toUpperCase()}. ${apellido}`}</p>
-                <p className={handlerColorTeam(escuderia)}>{escuderia}</p>
+                <p style={apellido.length > 9 ? {fontSize: '20px'}: {}} className={styles.name}>{`${forename[0].toUpperCase()}. ${apellido}`}</p>
+                <p className={handlerColorTeam(escuderia)} style={{fontSize: '15px'}}>{escuderia}</p>
             </div>
+            </Link>
         </div>
     )
 

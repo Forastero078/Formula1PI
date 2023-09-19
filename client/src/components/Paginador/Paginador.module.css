@@ -1,0 +1,25 @@
+.cards {
+
+    width: 90vw;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    padding-right: -100px;
+
+    margin: 70px;
+
+    border: solid white 1px;
+    /* border-radius: 20px 0px 0px 20px; */
+
+    background-image: url('https://c.wallhere.com/photos/f6/3c/1920x1080_px_abstract_Dark_pattern_vector-839366.jpg!d');
+
+    /* background-image: url('https://i.pinimg.com/originals/6c/25/8a/6c258a3dbdd62df9bf347b347b41f97e.jpg'); */
+    /* background-attachment: fixed; */
+    /* background-repeat: no-repeat; */
+
+    /* overflow: auto; */
+}

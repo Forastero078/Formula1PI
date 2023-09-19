@@ -1,0 +1,50 @@
+
+
+
+
+.nav{
+    display: flex;
+    width: 90vw;
+     
+
+    border: solid white 1px;
+    border-radius: 20px;
+
+    margin: 70px;
+
+    margin-bottom: -45px;
+    margin-top: -25px;
+
+    background-image: url('https://c.wallhere.com/photos/f6/3c/1920x1080_px_abstract_Dark_pattern_vector-839366.jpg!d');
+
+}
+
+.backAndNext{ 
+ 
+    position: relative;
+    width: 100px;
+    
+    
+
+    /* margin: 5px;
+    margin-top: 25px; */
+
+    padding: 2px;
+
+    color:rgb(7, 156, 236);
+    background-color: black;
+
+    border: solid yellow 1px;
+    border-radius: 5px;
+    text-align: center;
+
+    margin: 10px;
+    
+
+}
+
+.paginadorButtons{
+
+    right: 0;
+    transform: translateX(160%);
+}

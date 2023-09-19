@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+
+
+
+.footer{
+    position: relative;
+    width: 95vw;
+    height: 100px;
+
+    margin: 34px;
+    
+
+
+    border: solid white 1px;
+    border-radius: 20px;
+
+
+    background-image: url('https://c.wallhere.com/photos/f6/3c/1920x1080_px_abstract_Dark_pattern_vector-839366.jpg!d');
+
+    text-align: center;
+
+   
+}
+
+.p{
+    transform: translateY(20px);
+    position: relative;
+    top: 0;
+
+    font-size: 20px;
+    font-family: 'Space Mono';
+    color: white;
+
+    background-color: rgba(128, 128, 128, 0.445);
+}
+
+.logo{
+    width: 20px;
+    height: 20px;
+}

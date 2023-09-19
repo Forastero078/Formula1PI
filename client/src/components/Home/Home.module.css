@@ -45,7 +45,7 @@
 }
 
 .h4 {
-    margin: 70px;
+    margin: 20px;
     margin-top: 150px;
 
 
@@ -75,7 +75,7 @@
     padding-right: -100px;
 
     border: solid white 1px;
-    border-radius: 20px;
+    border-radius: 20px 0px 0px 20px;
 
     background-image: url('https://c.wallhere.com/photos/f6/3c/1920x1080_px_abstract_Dark_pattern_vector-839366.jpg!d');
 

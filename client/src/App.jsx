@@ -9,6 +9,7 @@ import LandingPage from './components/LandingPage/LandingPage';
 import Home from './components/Home/Home';
 import NavBar from './components/NavBar/NavBar';
 import Galeria from './components/Galeria/Galeria';
+import Detail from './components/Detail/Detail';
 
 function App() {
 
@@ -45,7 +46,9 @@ function App() {
     } catch (error) {
       alert('El usuario o contraseña es incorrecto');
     }
-  }
+  };
+
+  localStorage.setItem('prevId', JSON.stringify(''))
 
 
   return (
@@ -60,7 +63,7 @@ function App() {
         <Route path='/' element={<LandingPage login={login} />} />
         <Route path='/home' element={<Home />} />
         <Route path='/drivers' element={<Galeria />} />
-        <Route path='/detail' element={'Detail'} />
+        <Route path='/detail/:detailId' element={<Detail/>} />
         <Route path='/createRacer' element={'Form'} />
 
 

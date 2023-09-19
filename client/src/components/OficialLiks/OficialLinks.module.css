@@ -1,0 +1,126 @@
+
+
+
+.section{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.img1{
+
+    text-align: center; /* Centrar horizontalmente */
+    display: flex; /* Usar flexbox para centrar verticalmente */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente en flexbox */
+
+    position: relative;
+    width: 90%;
+	height: 200px;
+	
+	border-radius: 20px;
+
+    margin: 15px;
+
+    margin-top: 25px;
+
+    
+}
+
+
+.img{
+    position: absolute;
+    max-width: 100%;
+	max-height: 200px;
+	
+	background-color: black;
+	border: solid white 1px;
+
+    border-radius: 20px;
+
+    margin:-15px;
+
+   
+}
+
+.image{
+    position: absolute;
+    max-width: 200px;
+	height: 180px;
+	
+	background-color: black;
+	border: solid white 1px;
+
+    border-radius: 20px;
+
+    margin:-15px;
+
+   
+}
+.text{
+    display: none;
+}
+
+.img:hover{
+
+    filter: brightness(70%);
+    
+
+
+}
+
+.img1:hover{
+
+    
+    cursor:pointer;
+
+
+}
+
+.img1:hover .text{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    font-family: 'Space Mono';
+    z-index: 100;
+
+    
+}
+.text:hover ~ .img{
+    filter: brightness(70%)
+}
+
+.img2{
+    width: 90%;
+	height: 200px;
+	object-fit: none;
+	background-color: black;
+	border: solid white 1px;
+
+    border-radius: 20px;
+
+    margin: 15px;
+}
+
+
+.links{
+    display: flex;
+    width: 70vw;
+    height: 250px;
+
+    border: solid white 1px;
+    border-radius: 20px;
+    
+    margin-top: -250px;
+    margin-bottom: 50px;
+    margin-left: 30px;
+
+    background-image: url('https://c.wallhere.com/photos/f6/3c/1920x1080_px_abstract_Dark_pattern_vector-839366.jpg!d');
+
+}
+

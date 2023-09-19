@@ -69,10 +69,6 @@
     text-align: center;
 }
 
-.button:hover{
-    color:white;
-    background-color: rgb(132, 132, 7);
-}
 
 .boton{
     position: absolute;
