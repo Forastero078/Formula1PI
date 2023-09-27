@@ -7,7 +7,7 @@ import SearchBar from "../SearchBar/SearchBar";
 
 export default function NavButtonsTop(props) {
 
-    const { back, next, currentPage, handleGoToPage, search } = props;
+    const { back, next, currentPage, handleGoToPage, onSearch } = props;
 
     const handlerCurrentPage = (e) => {
         return handleGoToPage(Number(e.target.value));
@@ -22,7 +22,7 @@ export default function NavButtonsTop(props) {
                 <button onClick={next} className={styles.backAndNext}> Siguiente </button>
             </div>
 
-            <SearchBar search={search}/>
+            <SearchBar onSearch={onSearch}/>
 
         </div>
     )

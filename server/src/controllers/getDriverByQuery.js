@@ -1,6 +1,7 @@
 const axios = require('axios');
 const { Driver } = require('../db');
 const { Sequelize } = require('sequelize');
+const { Op } = require('sequelize');
 
 
 
@@ -15,9 +16,15 @@ const getDriverByQuery = async(req, res) => {
 
         const driversDB = await Driver.findAll({
             where: {
-              [Sequelize.Op.or]: [
-                { 'name': name },
-                { 'lastName': name },
+              [Op.or]: [
+                { 'name': { 
+                [Op.like]: name 
+                }
+            },
+            { 'lastName': { 
+                [Op.like]: name 
+                }
+            },
               ],
             },
           });
@@ -26,7 +33,8 @@ const getDriverByQuery = async(req, res) => {
         const filter = data.filter((element) => {
             const { forename, surname } = element.name;
 
-            return forename.toLowerCase() === name.toLowerCase() || surname.toLowerCase() === name.toLowerCase()
+            return forename.toLowerCase().includes(name.toLowerCase()) || surname.toLowerCase().includes(name.toLowerCase());  
+              
         });
 
         const arrayResponse = [...filter, ...driversDB];

@@ -7,7 +7,13 @@ module.exports = (sequelize) => {
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
-      primaryKey: true
+      primaryKey: true,
+      // defaultValue: 509,
+    },
+    isCreated: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false
+      
     },
     name: {
       type: DataTypes.STRING,
@@ -30,7 +36,7 @@ module.exports = (sequelize) => {
       allowNull: false
     },
     birdthDate: {
-      type: DataTypes.DATE,
+      type: DataTypes.DATEONLY,
       allowNull: false
     }
   });

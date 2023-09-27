@@ -11,6 +11,7 @@ const createDriver = (req, res) => {
     try {
 
         const newDriver = Driver.create({
+            isCreated: body.isCreated,
             name: body.name,
             lastName: body.lastName,
             description: body.description,

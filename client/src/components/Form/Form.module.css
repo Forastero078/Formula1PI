@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+
+.body{
+
+    width: 100vw;
+    /* height: 100vh; */
+
+    margin-top: -90px;
+   
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('https://static.vecteezy.com/system/resources/previews/002/400/831/large_2x/dark-blue-widescreen-background-with-wheels-with-different-transparencies-modern-geometric-design-simple-illustration-vector.jpg');
+
+    background-attachment: fixed;
+    background-repeat: repeat; 
+}
+
+.form{
+    position: relative;
+
+    width: 41%;
+    height: 70%;
+
+
+    border: solid white 1px;
+    border-radius: 20px;
+
+    left:0;
+    transform: translateX(60%);
+
+    margin-top: 20px;
+    margin-bottom: 70px;
+
+    padding: 20px 40px 20px 0px ;
+    /* padding-right: 40px; */
+
+
+
+
+    
+    background-image: url('https://c.wallhere.com/photos/f6/3c/1920x1080_px_abstract_Dark_pattern_vector-839366.jpg!d');
+}
+
+
+.h1 {
+
+    width: 100vw;
+    height: fit-content;
+
+    background-color: rgba(128, 128, 128, 0.123);
+
+    margin: 100px;
+    margin-left: -60px;
+    padding: 30px;
+    
+    /* margin-top: 150px; */
+
+    padding-top: 100px;
+
+    margin-bottom: -120px;
+
+    text-align: center;
+
+    color: white;
+
+    font-family: 'Space Mono';
+}
+
+.h4 {
+    margin: 20px;
+    margin-top: 150px;
+
+
+
+    text-align: center;
+
+    color: white;
+
+    font-family: 'Space Mono';
+}
+
+.labels{
+    color:white;
+    font-size: 15px;
+    font-family: 'Space Mono';
+}
+
+.inputsAndLabels{
+
+    margin-left: 40px;
+}
+
+.input{
+
+    padding: 5px;
+    margin: -5px;
+}
+
+.img{
+    position: absolute;
+
+    width: 320px;
+    height: 320px;
+
+
+    margin-left: 250px;
+    margin-top: -500px;
+
+    border: solid white 1px;
+    border-radius: 20px;
+}
+
+.button{
+    width: fit-content;
+
+    position: absolute;
+
+    margin-top: -50px;
+    margin-left: 10px;
+
+    left:0;
+    transform: translateX(250%);
+
+    
+
+    /* margin: 5px; */
+    /* margin-top: 25px; */
+
+    color:rgb(7, 156, 236);
+    background-color: black;
+
+    border: solid yellow 1px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+
+
+.warning{
+    position: absolute;
+    font-size: 10px;
+
+    color: rgb(189, 186, 186);
+
+    margin-top: 3px;
+    margin-left: -15px;
+}
+
+.textarea {
+    width: 300px;
+    height: 100px;
+
+    font-family: 'Space Mono';
+}

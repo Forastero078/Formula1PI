@@ -2,10 +2,10 @@ import {
     ALL_DRIVERS,
     CREATE_DRIVER,
     DELETE_DRIVER,
-    FILTERXTEAM,
-    FILTERXDB,
+    FILTER,
     ORDER_ALFABETICO,
-    ORDER_EDAD
+    ORDER_EDAD,
+    ON_SEARCH
 } from "./actions";
 
 
@@ -14,6 +14,7 @@ const initialState = {
 
     allDrivers: [],
     allDriversBackUp: [],
+    onSearch: []
 
 }
 
@@ -40,34 +41,43 @@ export default function rootReducer(state = initialState, { type, payload }) {
             return {
                 ...state,
                 allDrivers: filtrado,
-                allDriversBackUp : filtrado
+                allDriversBackUp: filtrado
 
             }
 
-        case FILTERXTEAM:
+        case FILTER:
             const { allDriversBackUp } = state;
+            let filter
             console.log({ payload: payload })
 
             if (payload === 'Todos los conductores') {
                 return {
                     ...state,
-                    allDrivers: [...state.allDriversBackUp]
+                    allDrivers: [...allDriversBackUp]
                 }
             }
 
-            let filter = allPokemonsBUp.filter((element) => {
-                return element.pokeTypes[0].type.name === payload
-            })
+            if (payload === 'Base de datos') {
+
+                filter = allDriversBackUp.filter((element) => {
+                    return !element.hasOwnProperty('isCreated')
+                })
+            }
+
+            if (payload === 'Mis conductores') {
+
+                filter = allDriversBackUp.filter((element) => {
+                    return element.hasOwnProperty('isCreated')
+                })
+            }
 
 
 
             return {
                 ...state,
-                allPokemons: [...filter]
+                allDrivers: [...filter]
             }
 
-            case FILTERXDB:
-                return{}
 
         case ORDER_ALFABETICO:
 
@@ -77,33 +87,74 @@ export default function rootReducer(state = initialState, { type, payload }) {
             }
 
             if (payload === 'ascendente') {
-                let { allPokemons } = state;
-                charSort = allPokemons.sort((a, b) => a.name.localeCompare(b.nombre))
+
+                charSort = state.allDrivers.sort((a, b) => {
+                    if (a.name.surname && b.name.surname) {
+                        return a.name.surname.localeCompare(b.name.surname)
+                    } else {
+                        if(a.lastName && b.lastName){
+                            return a.lastName.localeCompare(b.lastName)
+                        }
+                    }
+                })
             } else if (payload === 'descendente') {
-                let { allPokemons } = state;
-                charSort = allPokemons.sort((a, b) => b.name.localeCompare(a.name));
+                
+                charSort = state.allDrivers.sort((a, b) => {
+                    if (a.name.surname && b.name.surname) {
+                        return b.name.surname.localeCompare(a.name.surname)
+                    } else {
+                        if(b.lastName && a.lastName){
+                            return b.lastName.localeCompare(a.lastName)
+                        }
+                    }
+                })
             }
 
             return {
                 ...state,
-                allPokemons: [...charSort]
+                allDrivers: [...charSort]
             };
         case ORDER_EDAD:
 
             let charsSort;
 
+            if (payload === 'edad') {
+
+               charSort = state.allDriversBackUp.sort((a, b) => {
+                return a.id - b.id
+               })
+            }
+
             if (payload === 'ascendente') {
-                let { allPokemons } = state;
-                charsSort = allPokemons.sort((a, b) => a.stats[1].base_stat - b.stats[1].base_stat)
+                
+                charsSort = state.allDriversBackUp.sort((a, b) => {
+                    const dateA = new Date(a.dob);
+                    const dateB = new Date(b.dob)
+
+                    return dateA - dateB
+                });
             } else if (payload === 'descendente') {
-                let { allPokemons } = state;
-                charsSort = allPokemons.sort((a, b) => b.stats[1].base_stat - a.stats[1].base_stat);
+                
+                charsSort = state.allDriversBackUp.sort((a, b) => {
+                    const dateA = new Date(a.dob);
+                    const dateB = new Date(b.dob)
+
+                    return dateB - dateA
+                });
             }
 
             return {
                 ...state,
-                allPokemons: [...charsSort]
+                allDrivers: [...charsSort]
             };
+
+        case ON_SEARCH:
+
+            return {
+                ...state,
+                onSearch: payload
+            }
+
         default:
             return state;
     }

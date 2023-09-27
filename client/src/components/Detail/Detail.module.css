@@ -1,0 +1,126 @@
+.detail {
+
+    width: 100vw;
+
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('https://static.vecteezy.com/system/resources/previews/002/400/831/large_2x/dark-blue-widescreen-background-with-wheels-with-different-transparencies-modern-geometric-design-simple-illustration-vector.jpg');
+
+}
+
+.header {
+
+
+    text-align: center;
+
+    margin-top: -70px;
+    margin-bottom: 200px;
+}
+
+.h1 {
+
+    width: 100vw;
+    height: fit-content;
+
+    background-color: rgba(128, 128, 128, 0.123);
+
+    margin: 100px;
+    margin-left: -60px;
+    padding: 30px;
+
+    /* margin-top: 150px; */
+
+    padding-top: 100px;
+
+    margin-bottom: -120px;
+
+    text-align: center;
+
+    color: white;
+
+    font-family: 'Space Mono';
+}
+
+.img {
+    width: 300px;
+    height: 400px;
+
+    border: solid white 1px;
+    border-radius: 20px;
+
+    margin-top: -40px;
+}
+
+.info {
+
+    font-family: 'Space Mono';
+    font-size: 15px;
+
+    color: white;
+
+
+
+    margin: 0px;
+
+
+
+}
+
+.span {
+    text-decoration: underline;
+}
+
+.main {
+    display: flex;
+
+    margin: 70px;
+
+    z-index: 2;
+}
+
+.text {
+
+    margin-top: 70px;
+
+    padding-right: 40px;
+
+}
+
+.number {
+
+    position: absolute;
+
+    display: flex;
+
+  
+    width: fit-content;
+    height: fit-content;
+
+    
+
+    font-size: 250px;
+
+    background: rgba(97, 96, 96, 0.096);
+
+    border-radius: 50%;
+
+    padding: 20px;
+
+    text-align: center;
+
+    justify-content: center;
+
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+   z-index: 0;
+}
+
+.numberSpan{
+position: relative;
+
+color: rgba(0, 0, 0, 0.616);
+
+top: 25%;
+
+margin: -40px 0px -40px 0px;
+}

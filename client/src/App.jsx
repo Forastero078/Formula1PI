@@ -10,6 +10,7 @@ import Home from './components/Home/Home';
 import NavBar from './components/NavBar/NavBar';
 import Galeria from './components/Galeria/Galeria';
 import Detail from './components/Detail/Detail';
+import Form from './components/Form/Form';
 
 function App() {
 
@@ -48,8 +49,6 @@ function App() {
     }
   };
 
-  localStorage.setItem('prevId', JSON.stringify(''))
-
 
   return (
     <div className='App'>
@@ -64,7 +63,7 @@ function App() {
         <Route path='/home' element={<Home />} />
         <Route path='/drivers' element={<Galeria />} />
         <Route path='/detail/:detailId' element={<Detail/>} />
-        <Route path='/createRacer' element={'Form'} />
+        <Route path='/create' element={<Form/>} />
 
 
 

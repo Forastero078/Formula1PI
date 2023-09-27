@@ -3,10 +3,10 @@ import axios from 'axios';
 export const ALL_DRIVERS = 'ALL_DRIVERS';
 export const CREATE_DRIVER = 'CREATE_DRIVER';
 export const DELETE_DRIVER = 'DELETE_DRIVER';
-export const FILTERXTEAM = 'FILTERXTEAM';
-export const FILTERXDB = 'FILTERXDB';
+export const FILTER = 'FILTER'
 export const ORDER_ALFABETICO = 'ORDER_ALFABETICO';
 export const ORDER_EDAD = 'ORDER_EDAD';
+export const ON_SEARCH = 'ON_SEARCH';
 
 export const allDrivers = () => {
    
@@ -54,19 +54,14 @@ export const createDriver = (driverData) => {
     };
  };
 
- export const filterXteam = (escuderia) => {
+ export const filter = (payload) => {
     return {
-        type: FILTERXTEAM,
-        payload: escuderia
+        type: FILTER,
+        payload: payload
     }
 };
 
- export const filterXdb = (data) => {
-    return {
-        type: FILTERXDB,
-        payload: data
-    }
-};
+
 
 export const orderAlfabetico = (type) => {
 
@@ -83,5 +78,13 @@ export const orderEdad = (type) => {
    return {
        type: ORDER_EDAD,
        payload: type
+   }
+};
+
+export const onSearchDriver = (data) => {
+
+   return {
+      type: ON_SEARCH,
+      payload: data
    }
 };

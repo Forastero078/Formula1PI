@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import NavButtonsTop from "../NavButtonsTop/NavButtonsTop";
 import Paginador from "../Paginador/Paginador";
 import Footer from "../Footer/Footer";
+import axios from "axios";
 
 
 
@@ -11,18 +12,26 @@ import Footer from "../Footer/Footer";
 export default function Galeria() {
 
     const [ drivers, setDrivers ] = useState([]);
+    const [ searchDriver, setSearchDriver ] = useState([]);
 
     const [ currentPage, setCurrentPage ] = useState(1);
 
-    const globalState = useSelector((state) => state);
+    const globalState = useSelector((state) => state.allDrivers);
+    const searchState = useSelector((state) => state.onSearch);
 
+    let driversDisplay;
 
     useEffect(() => {
 
 
-        setDrivers(globalState.allDrivers)
+        setDrivers(globalState);
+        setSearchDriver(searchState);
 
-    }, [setDrivers, globalState]);
+        driversDisplay = handleCut();
+
+       
+
+    }, [setDrivers, globalState, searchState]);
 
     const cardsPorPagina = 15;
     const totalElements = drivers.length;
@@ -55,6 +64,39 @@ export default function Galeria() {
         } else {
             alert(`¡Ups! no hay pagina ${pageNumber}` )
         }
+    };
+
+    async function handleSearch(search) {
+      
+        try {
+            const response = await axios.get(`http://localhost:3001/drivers/name?name=${search}`);
+            const { data } = response;
+
+            
+            return data;
+        } catch (error) {
+            console.log({error: error.message})
+        }
+    };
+
+    function handleCut() {
+        if(searchDriver.length !== 0){
+        console.log(searchDriver);
+            return (searchState).slice(0, 15);
+        
+        } else {
+            return console.log('no hay data');
+        }
+    };
+
+    const handleDisplay = () => {
+
+      if(searchDriver.length > 0){
+        return handleCut();
+      } else {
+        return getCurrentPageItems();
+      }       
+
     }
 
 
@@ -75,9 +117,10 @@ export default function Galeria() {
              next={handleNextPage}
              currentPage={currentPage}
              handleGoToPage={handleGoToPage}
+             onSearch={handleSearch}
             />
 
-            <Paginador driversDisplay={getCurrentPageItems()}/>
+            <Paginador driversDisplay={getCurrentPageItems()} searchDisplay={handleCut()}/>
 
             <Footer/>
 

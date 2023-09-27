@@ -15,7 +15,8 @@ export default function Card(props) {
         name,
         image,
         escuderia,
-        number
+        number,
+        isCreated
     } = props;
 
     const apellido = surname[0].toUpperCase() + surname.slice(1)
@@ -24,7 +25,7 @@ export default function Card(props) {
 
     return (
         <div className={styles.card}>
-            <Link to={`/detail/${id}`}>
+            <Link to={ isCreated === true ? `/detail/${surname}` : `/detail/${id}`}>
             <img src={image} alt={surname} className={styles.img} loading="eager"/>
 
             <div className={styles.info}>

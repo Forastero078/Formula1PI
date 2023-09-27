@@ -11,46 +11,77 @@ export default function Detail() {
     const [character, setCharacter] = useState([]);
 
     const { detailId } = useParams();
-    
-    const prevId = useMemo(() => {return ''}, [detailId]);
 
-    
 
     useEffect(() => {
 
-        async function update() {
-        try {
-            const response = await axios.get(`http://localhost:3001/drivers/${detailId}`);
-            const { data } = response;
+        return async function () {
+            try {
+                const response = await axios.get(`http://localhost:3001/drivers/${detailId}`);
+                const { data } = response;
 
-            data ? setCharacter(data) : console.log('No data');
-        } catch (error) {
-            console.log({ error: error.message });
+                data ? setCharacter(data) : console.log('No data');
+                console.log(detailId)
+                console.log(data)
+            } catch (error) {
+                console.log({ error: error.message });
+            }
         }
+
+
+    }, [detailId]);
+
+
+    let nombre;
+    let apellido;
+
+    let id,
+        name,
+        lastName,
+        nationality,
+        image,
+        description,
+        dob,
+        teams,
+        url,
+        number
+
+
+
+    if (character[0] && isNaN(detailId)) {
+
+        id= character[0].id
+        name = character[0].name
+        lastName = character[0].lastName
+        image = character[0].image
+        nationality = character[0].nationality
+        dob = character[0].birdthDate
+        description = character[0].description
+        teams = ''
+        number = '\N'
+
+        nombre = name[0].toUpperCase() + name.slice(1);
+        apellido = lastName[0].toUpperCase() + lastName.slice(1);
+
+    } 
+    if(character[0] && !character[0].isCreated){
+
+
+            id = character[0].id
+            name = character[0].name
+            nationality = character[0].nationality
+            image = character[0].image.url ? character[0].image.url : "https://wallpapercave.com/wp/wp8757580.jpg"
+            description = character[0].description
+            dob = character[0].dob
+            teams = character[0].teams
+            url = character[0].url
+            number = character[0].number
+
+        nombre = name.forename[0].toUpperCase() + name.forename.slice(1);
+        apellido = name.surname[0].toUpperCase() + name.surname.slice(1);
     }
-    
-    if(prevId !== detailId) update();
-    console.log(prevId)
-    console.log(detailId)
-}, []);
 
 
-
-    // if (character) {
-    //     const {
-    //         id,
-    //         nombre,
-    //         apellido,
-    //         nacionalidad,
-    //         imagen,
-    //         descripcion,
-    //         dob,
-    //         teams
-    //     } = character[0];
-    // }
-
-    // const name = nombre[0].toUpperCase() + nombre.slice(1);
-    // const lastName = apellido[0].toUpperCase() + apellido.slice(1);
 
 
 
@@ -61,43 +92,37 @@ export default function Detail() {
 
 
             <header className={styles.header}>
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                
-                <button onClick={() => console.log(character)}>LOGGG!!!</button>
-                <button onClick={() => console.log(refPrev)}>LOGGG!!!</button>
-                {/* <h1 className={styles.h1}>{`${name} ${lastName}`}</h1> */}
+
+                <h1 className={styles.h1}>{`${nombre} ${apellido}`}</h1>
+
             </header>
 
-            {/* <main className={styles.main}>
+            <div className={styles.number}>
+                <span className={styles.numberSpan}>{number}</span>
+            </div>
 
-                <span className={styles.info}>Fecha de nacimiento: {dob}</span>
-                <br />
-                <span className={styles.info}>Nacionalidad : {nacionalidad}</span>
-                <br />
-                <span className={styles.info}>Escuderias: {teams}</span>
-                <br />
-                <span className={styles.info}>Descripcion: {descripcion}</span>
+            <main className={styles.main}>
+
+                <section className={styles.text}>
+
+                    <p className={styles.info}><span className={styles.span}>Fecha de nacimiento:</span> {dob}</p>
+                    <br />
+                    <p className={styles.info}><span className={styles.span}>Nacionalidad :</span> {nationality}</p>
+                    <br />
+                    <p className={styles.info}><span className={styles.span}>Escuderias: </span> "{teams}"</p>
+                    <br />
+                    <p className={styles.info}><span className={styles.span}>Descripcion: </span> {description}</p>
+
+                </section>
 
 
-                <img src={imagen} alt={`${name} ${lastName}`} className={styles.img} />
-            </main> */}
+                <img src={image} alt={`${nombre} ${apellido}`} className={styles.img} />
+
+            </main>
+
+
+            <hr style={{width: '90%', marginTop: '20px', marginBottom: '20px'}}/>
+            <br />
 
 
         </div>
